@@ -1,0 +1,2 @@
+# Target SoC for ESP-IDF
+CONFIG_IDF_TARGET="esp32c6"

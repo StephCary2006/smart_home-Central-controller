@@ -1,0 +1,31 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "drivers/i2c_manager.c"
+        "drivers/i2c_recovery.c"
+        "drivers/sht31_driver.c"
+        "drivers/ssd1306_driver.c"
+        "drivers/adc_light.c"
+        "drivers/uart_pms7003.c"
+        "drivers/relay_ctrl.c"
+        "drivers/buzzer_ctrl.c"
+        "services/timer_engine.c"
+        "services/sntp_sync.c"
+        "services/cron_scheduler.c"
+        "services/rule_engine.c"
+        "services/telemetry.c"
+    INCLUDE_DIRS
+        "include"
+        "."
+    REQUIRES
+        driver
+        esp_driver_i2c
+        esp_adc
+        esp_timer
+        esp_wifi
+        esp_event
+        esp_netif
+        nvs_flash
+        lwip
+        esp_rom
+)
